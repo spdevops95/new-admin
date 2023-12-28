@@ -2,7 +2,7 @@ pipeline {
     agent {
         kubernetes {
             label 'kubernetes-agent'
-        }
+        }   ymlFile 'deployment.yml'
     }
     
     environment {
