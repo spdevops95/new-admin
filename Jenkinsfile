@@ -1,7 +1,7 @@
 pipeline {
     agent {
         kubernetes {
-            label 'test1-${BUILD_ID}'
+            //label 'test1-${BUILD_ID}'
             defaultcontainer "test1"
             yamlFile 'deployment.yml'
         }   
