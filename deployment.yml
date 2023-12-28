@@ -9,11 +9,11 @@ spec:
       app: your-app
   template:
     metadata:
-      labels:
+      labels: 
         app: your-app
     spec:
       containers:
-      - name: your-app-container
-        image: your-registry/your-image:latest
+      - name: test1
+        image: ubuntu
         ports:
         - containerPort: 8080
