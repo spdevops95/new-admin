@@ -2,11 +2,11 @@ pipeline {
     agent {
         kubernetes {
             label 'kubernetes-agent'
-        }   ymlFile 'deployment.yml'
+        }   yamlFile 'deployment.yml'
     }
     
     environment {
-        PATH = "/usr/local/bin:$PATH"
+        //PATH = "/usr/local/bin:$PATH"
     }
 
     stages {
