@@ -2,6 +2,7 @@ pipeline {
     agent {
         kubernetes {
             label 'test1-${BUILD_ID}'
+            defaultcontainer "test1"
             yamlFile 'deployment.yml'
         }   
     }
@@ -14,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Executing the build command...'
-                sh 'your_build_command'
+                
                 // Replace 'your_build_command' with the actual build command
             }
         }
@@ -22,7 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Executing the test command...'
-                sh 'your_test_command'
+            
                 // Replace 'your_test_command' with the actual test command
             }
         }
@@ -30,7 +31,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Executing the deployment command...'
-                sh 'your_deploy_command'
+                
                 // Replace 'your_deploy_command' with the actual deployment command
             }
         }
