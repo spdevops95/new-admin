@@ -1,14 +1,14 @@
 pipeline {
     agent {
         kubernetes {
-            //label 'test1-${BUILD_ID}'
+            
             defaultcontainer "test1"
             yamlFile 'deployment.yml'
         }   
     }
     
     environment {
-        //PATH = "/usr/local/bin:$PATH"
+        
     }
 
     stages {
